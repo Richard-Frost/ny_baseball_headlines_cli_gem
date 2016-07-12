@@ -16,16 +16,15 @@ class NyBaseballHeadlines::News
     mets.headlines << m.text
     end
     mets
-    end
+  end
 
   def self.yanks_post 
-
     yanks = self.new
     yanks_doc = Nokogiri::HTML(open("http://nypost.com/tag/new-york-yankees/"))
     yanks_doc.search("article header h3 a[href]").each_with_object({}) do |y|
-    yanks.headlines << y.text
+      yanks.headlines << y.text
     end
     yanks
-    end
+  end
 
 end

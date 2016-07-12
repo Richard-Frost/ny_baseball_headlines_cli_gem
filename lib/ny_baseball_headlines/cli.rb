@@ -7,14 +7,14 @@ class NyBaseballHeadlines::CLI
 
   def greeting
     puts ""
-    puts "Welcome to NY Baseball News"
+    puts "Welcome to NY Baseball Headlines"
     puts "***************************"
     puts ""
   end
 
   def menu
-    puts "Press 1 for the latest Mets news"
-    puts "Press 2 for the latest Yankees news"
+    puts "Enter 1 for the latest Mets news"
+    puts "Enter 2 for the latest Yankees news"
     puts "Enter menu for options"
 
     input = nil
@@ -27,33 +27,40 @@ class NyBaseballHeadlines::CLI
         puts "Mets Headlines"
         puts "--------------"
         mets_news
-
+        puts""
+        puts "Enter menu or exit"
+        puts""
 
       elsif input.to_i == 2
         puts ""
         puts "NY Post"
         puts "Yankees Headlines" 
-        puts "--------------"
+        puts "-----------------"
         yankees_news
+        puts""
+        puts "Enter menu or exit"
+        puts""
 
         elsif input == "menu"
-        menu
+          menu
+        else
+        puts "That is not a valid option.  Please try again.  Enter menu for more options."
       end
     end
   end
 
   def mets_news
     mets = NyBaseballHeadlines::News.mets_post
-    mets.headlines.each do |m|
-    puts m
+    mets.headlines.each.with_index(1) do |m_headline, i|
+    puts "#{i}) #{m_headline}"
     end
   end 
 
   def yankees_news
     yanks = NyBaseballHeadlines::News.yanks_post
-    yanks.headlines.each do |y|
-      puts y
+    yanks.headlines.each.each.with_index(1) do |y_headline, i|
+      puts "#{i}) #{y_headline}" 
     end
   end
 
- end
+end

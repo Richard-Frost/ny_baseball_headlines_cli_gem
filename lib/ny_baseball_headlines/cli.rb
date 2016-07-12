@@ -26,16 +26,34 @@ class NyBaseballHeadlines::CLI
         puts "NY Post"
         puts "Mets Headlines"
         puts "--------------"
+        mets_news
+
 
       elsif input.to_i == 2
         puts ""
         puts "NY Post"
         puts "Yankees Headlines" 
         puts "--------------"
+        yankees_news
+
         elsif input == "menu"
         menu
       end
     end
+  end
+
+  def mets_news
+    mets = NyBaseballHeadlines::News.mets_post
+    mets.headlines.each do |m|
+    puts m
+    end
   end 
 
-end
+  def yankees_news
+    yanks = NyBaseballHeadlines::News.yanks_post
+    yanks.headlines.each do |y|
+      puts y
+    end
+  end
+
+ end

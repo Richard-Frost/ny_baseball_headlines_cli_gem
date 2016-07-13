@@ -3,6 +3,7 @@ class NyBaseballHeadlines::CLI
   def call
     greeting
     menu
+    goodbye
   end
 
   def greeting
@@ -61,6 +62,10 @@ class NyBaseballHeadlines::CLI
     yanks.headlines.each.each.with_index(1) do |y_headline, i|
       puts "#{i}) #{y_headline}" 
     end
+  end
+
+  def goodbye
+    puts "Goodbye! Have a great day!"
   end
 
 end

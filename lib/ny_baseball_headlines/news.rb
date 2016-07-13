@@ -9,7 +9,6 @@ class NyBaseballHeadlines::News
   end
   
   def self.mets_post 
-
     mets = self.new
     mets_doc = Nokogiri::HTML(open("http://nypost.com/tag/new-york-mets/"))
     mets_doc.search("article header h3 a[href]").each_with_object({}) do |m|

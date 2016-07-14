@@ -45,7 +45,7 @@ class NyBaseballHeadlines::CLI
         elsif input == "menu"
           menu
         else
-        puts "That is not a valid option.  Please try again.  Enter menu for more options."
+        puts "That is not a valid option. Please try again. Enter menu for more options."
       end
     end
   end
@@ -65,7 +65,7 @@ class NyBaseballHeadlines::CLI
   end
 
   def goodbye
-    puts "Goodbye! Have a great day!"
+    puts "Goodbye! Have a great day!"                                                          
   end
 
 end

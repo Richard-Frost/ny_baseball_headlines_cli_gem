@@ -1,5 +1,3 @@
-
-require 'pry'
 require 'open-uri'
 require 'nokogiri'
 require "ny_baseball_headlines/version"

@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Richard-Frost"]
   spec.email         = ["frost.rchrd@gmail.com"]
 
-  spec.summary       = %q{"NY Sports Healines"}
+  spec.summary       = %q{"NY Baseball Headlines"}
   spec.homepage      = "https://github.com/Richard-Frost/ny_baseball_headlines_cli_gem"
   spec.license       = "MIT"
 

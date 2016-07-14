@@ -3,7 +3,6 @@ class NyBaseballHeadlines::News
 
   attr_accessor :headlines
 
-  
   def initialize
     @headlines = []
   end

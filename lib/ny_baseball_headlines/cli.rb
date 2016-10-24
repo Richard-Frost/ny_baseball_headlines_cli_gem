@@ -9,7 +9,7 @@ class NyBaseballHeadlines::CLI
   def greeting
     puts ""
     puts "Welcome to NY Baseball Headlines"
-    puts "***************************"
+    puts "********************************"
     puts ""
   end
 
@@ -62,6 +62,8 @@ class NyBaseballHeadlines::CLI
     input = gets.strip
     if input.downcase == "menu"
       menu
+    elsif input.downcase == "exit"
+      goodbye
     else
     NyBaseballHeadlines::Headlines.article_text(input)
     

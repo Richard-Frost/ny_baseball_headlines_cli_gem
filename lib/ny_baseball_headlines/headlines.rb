@@ -8,7 +8,6 @@ class NyBaseballHeadlines::Headlines
     @url = url
     @article = article
     @@all << self
-    
   end
 
   def self.headlines_with_index
@@ -18,6 +17,9 @@ class NyBaseballHeadlines::Headlines
   end
 
   def self.article_text(input)
+    puts ""
+    puts "#{@@all[input.to_i-1].headline}"
+    puts "----------------------------------------------------------------------"
     puts "#{@@all[input.to_i-1].article}"
   end
 
